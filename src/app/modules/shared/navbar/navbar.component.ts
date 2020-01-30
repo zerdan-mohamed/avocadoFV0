@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,11 @@ export class NavbarComponent implements OnInit {
 
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor(public translate: TranslateService) {
+    // configure language supported in application
+    translate.addLangs(['fr', 'ar']);
+    translate.setDefaultLang('fr');
+  }
 
   ngOnInit() { }
 
@@ -19,7 +24,11 @@ export class NavbarComponent implements OnInit {
       window.dispatchEvent(
         new Event('resize')
       );
-    }, 300);
+    }, 3000);
   }
 
+  // function for switch to another language
+  switchLang(lang: string) {
+    this.translate.use(lang);
+  }
 }

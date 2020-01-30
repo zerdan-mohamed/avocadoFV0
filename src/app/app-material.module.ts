@@ -18,7 +18,8 @@ import {
   MatPaginatorModule,
   MatSortModule,
   MatMenuModule,
-  MatDividerModule
+  MatDividerModule,
+  MatSelectModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -44,7 +45,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatPaginatorModule,
     MatSortModule,
     MatMenuModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSelectModule
   ],
   exports: [
     MatButtonModule,
@@ -64,7 +66,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatPaginatorModule,
     MatSortModule,
     MatMenuModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSelectModule
   ]
 })
 export class AppMaterialModule { }

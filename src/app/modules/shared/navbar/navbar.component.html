@@ -1,10 +1,3 @@
-<!--
-<mat-toolbar color="primary" class="admin-toolbar mat-elevation-z5">
-  <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-  <h1 class="admin-app-name">Avocado</h1>
-</mat-toolbar>
--->
-
 <mat-toolbar color="primary">
     <mat-toolbar-row>
         <button mat-icon-button (click)="toggleSideBar()">
@@ -14,13 +7,18 @@
 
         <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
             <ul fxLayout="row" fxLayoutGap="20px">
-                <!-- 
-                <li>
-                    <button mat-icon-button>
-                        <mat-icon>settings</mat-icon>
-                    </button>
-                </li>
-                 -->
+              <li>
+                <select
+                  class="form-control"
+                  #selectedLang
+                  (change)="switchLang(selectedLang.value)">
+                  <option *ngFor="let language of translate.getLangs()"
+                          [value]="language"
+                          [selected]="language === translate.currentLang">
+                    {{ language }}
+                  </option>
+                </select>
+              </li>
 
                 <li>
                     <button mat-button [matMenuTriggerFor]="menu">
