@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppMaterialModule } from '../../app-material.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -10,7 +11,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   declarations: [NavbarComponent, SidebarComponent],
   imports: [
     CommonModule,
-    AppMaterialModule
+    AppMaterialModule,
+    RouterModule
   ],
   exports: [NavbarComponent, SidebarComponent]
 })

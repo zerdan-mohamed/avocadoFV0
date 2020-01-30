@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppMaterialModule } from './app-material.module';
 import { SharedModule } from './modules/shared/shared.module';
+import { FeaturesModule } from './modules/features/features.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SharedModule } from './modules/shared/shared.module';
     BrowserAnimationsModule,
     BrowserModule,
     AppMaterialModule,
-    SharedModule
+    SharedModule,
+    FeaturesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
